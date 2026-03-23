@@ -9,9 +9,44 @@ on:
 
 jobs:
 
+  quality:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Instalar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Rodar lint
+        run: npm run lint
+
+      - name: Run Coverage
+        run: npm run test
+
+      - name: Análise com SonarCloud
+        uses: SonarSource/sonarcloud-github-action@v2
+        with:
+          args: >
+            -Dsonar.projectKey=raffamir_pipeline-aula1803
+            -Dsonar.organization=raffamir
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN2 }}
+  
+
+
+
   build:
 
     runs-on: ubuntu-latest
+    needs: quality
 
     steps:
       - name: Checkout código
