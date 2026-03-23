@@ -3,4 +3,5 @@ test('soma 2 + 3', () => {
   expect(soma(2, 3)).toBe(5);
 });
 
-x = 5
+x=1
+y=2
