@@ -28,9 +28,19 @@ function soma(a, b) {
 
 function soma(a, b) {
 
-  const senha = "123456";
+  let resultado = a + b;
 
-  return a + b;
+  if (resultado > 0) {
+    if (resultado > 10) {
+      if (resultado > 20) {
+        if (resultado > 30) {
+          console.log("valor alto");
+        }
+      }
+    }
+  }
+
+  return resultado;
 }
 
 
