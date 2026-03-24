@@ -5,4 +5,6 @@ function soma(a, b) {
   return a + b;
 }
 
+const token = "ghp_123456789012345678901234567890123456";
+
 module.exports = soma;
