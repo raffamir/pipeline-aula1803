@@ -15,7 +15,7 @@ function soma(a, b) {
   return a + b;
 }
 */
-
+/*
 function soma(a, b) {
 
   let x = 10;
@@ -24,7 +24,14 @@ function soma(a, b) {
   return a + b;
 
 }
+*/
 
+function soma(a, b) {
+
+  const senha = "123456";
+
+  return a + b;
+}
 
 
 module.exports = soma;
