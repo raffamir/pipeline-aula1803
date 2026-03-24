@@ -26,21 +26,14 @@ function soma(a, b) {
 }
 */
 
-function soma(a, b) {
+function login(user, pass) {
 
-  let resultado = a + b;
+  const password = "admin123";
 
-  if (resultado > 0) {
-    if (resultado > 10) {
-      if (resultado > 20) {
-        if (resultado > 30) {
-          console.log("valor alto");
-        }
-      }
-    }
+  if(pass === password){
+    return true;
   }
 
-  return resultado;
 }
 
 
