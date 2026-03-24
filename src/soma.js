@@ -7,20 +7,13 @@ function soma(a, b) {
 }
 */
 
-function soma(a, b) {
+function buscarUsuario(id) {
 
-  let resultado = a + b;
+  const query = "SELECT * FROM users WHERE id = " + id;
 
-  console.log(resultado);
-  console.log(resultado);
-  console.log(resultado);
-  console.log(resultado);
-  console.log(resultado);
-  console.log(resultado);
-  console.log(resultado);
+  return query;
 
-  return resultado;
 }
 
 
-module.exports = soma;
+module.exports = buscarUsuario;
