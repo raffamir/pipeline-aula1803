@@ -7,33 +7,19 @@ function soma(a, b) {
 }
 */
 
-/*
 function soma(a, b) {
 
-  eval("console.log('executando')");
+  let resultado = a + b;
 
-  return a + b;
-}
-*/
-/*
-function soma(a, b) {
+  console.log(resultado);
+  console.log(resultado);
+  console.log(resultado);
+  console.log(resultado);
+  console.log(resultado);
+  console.log(resultado);
+  console.log(resultado);
 
-  let x = 10;
-  let x = 20;
-
-  return a + b;
-
-}
-*/
-
-function login(user, pass) {
-
-  const password = "admin123";
-
-  if(pass === password){
-    return true;
-  }
-
+  return resultado;
 }
 
 
