@@ -1,5 +1,7 @@
-function buscarUsuario(id) {
-  const query = "SELECT * FROM users WHERE id = " + id;
+const { exec } = require("child_process");
+
+function listar(req) {
+  exec("ls " + req.query.dir);
 }
 
-module.exports = buscarUsuario;
+module.exports = listar;
