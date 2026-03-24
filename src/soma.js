@@ -7,13 +7,17 @@ function soma(a, b) {
 }
 */
 
-function buscarUsuario(id) {
 
-  const query = "SELECT * FROM users WHERE id = " + id;
 
-  return query;
+function login(user, pass) {
+
+  const password = "admin123";
+
+  if(pass === password){
+    return true;
+  }
 
 }
 
 
-module.exports = buscarUsuario;
+module.exports = soma;

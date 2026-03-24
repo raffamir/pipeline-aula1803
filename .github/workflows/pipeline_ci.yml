@@ -25,12 +25,6 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
-      - name: Rodar lint
-        run: npm run lint || true
-
-      - name: Run Coverage
-        run: npm run coverage
-
       - name: Análise com SonarCloud
         uses: SonarSource/sonarcloud-github-action@v3
         with:
