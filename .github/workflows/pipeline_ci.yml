@@ -32,7 +32,7 @@ jobs:
         run: npm run coverage
 
       - name: Análise com SonarCloud
-        uses: SonarSource/sonarcloud-github-action@v2
+        uses: SonarSource/sonarcloud-github-action@v3
         with:
           args: >
             -Dsonar.projectKey=raffamir_pipeline-aula1803
@@ -40,9 +40,13 @@ jobs:
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info            
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN2 }}
-  
 
-
+      - name: Sonar Quality Gate
+        uses: SonarSource/sonarqube-quality-gate-action@v1
+        timeout-minutes: 5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN2 }}    
+        
 
   build:
 
